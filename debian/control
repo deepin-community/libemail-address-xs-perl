@@ -1,0 +1,29 @@
+Source: libemail-address-xs-perl
+Maintainer: Debian Perl Group <pkg-perl-maintainers@lists.alioth.debian.org>
+Uploaders: Damyan Ivanov <dmn@debian.org>
+Section: perl
+Testsuite: autopkgtest-pkg-perl
+Priority: optional
+Build-Depends: debhelper (>= 10),
+               perl
+Standards-Version: 4.1.4
+Vcs-Browser: https://salsa.debian.org/perl-team/modules/packages/libemail-address-xs-perl
+Vcs-Git: https://salsa.debian.org/perl-team/modules/packages/libemail-address-xs-perl.git
+Homepage: https://metacpan.org/release/Email-Address-XS
+
+Package: libemail-address-xs-perl
+Architecture: any
+Depends: ${misc:Depends},
+         ${perl:Depends},
+         ${shlibs:Depends}
+Description: Perl library for RFC 5322 address/group parsing and formatting
+ Email::Address::XS implements RFC 5322 parser and formatter of email
+ addresses and groups. It parses an input string from email headers which
+ contain a list of email addresses or a groups of email addresses (like From,
+ To, Cc, Bcc, Reply-To, Sender, ...). Also it can generate a string value for
+ those headers from a list of email addresses objects.
+ .
+ Parser and formatter functionality is implemented in XS and uses shared code
+ from Dovecot IMAP server.
+ .
+ It is a drop-in replacement for the Email::Address module.
